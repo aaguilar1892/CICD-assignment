@@ -37,7 +37,8 @@ jobs:
           fi
 
       # Step 4: Run Python tests
-      ####
+      - name: Run Python tests
+        run: pytest
 
   deploy:
     name: Deploy & Push to Docker Hub
