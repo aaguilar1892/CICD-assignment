@@ -36,6 +36,11 @@ jobs:
             echo "No lint configuration found, skipping linting."
           fi
 
+      # Step 4: Fix Python code style issues
+      - name: Fix Python code style issues
+        run: |
+          autopep8 --in-place --aggressive --aggressive -r .
+
       # Step 4: Run Python tests
       - name: Run Python tests
         run: pytest
